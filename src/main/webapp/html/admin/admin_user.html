@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>全部用户</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/bootstrap.min.js" ></script>
+    <script>
+        $(function () {
+            $('#header').load('admin_header.html');
+        })
+    </script>
+</head>
+<body>
+<div id="header"></div>
+<div style="padding: 70px 550px 10px">
+    <form method="post" action="querybook.html" class="form-inline"  id="searchform">
+            角色查询：<select name="flag" class="form-control">
+                    <option disabled selected>请选择</option>
+                    <option value="0">管理员</option>
+                    <option value="1">读者</option>
+                  </select>
+        <div class="input-group">
+           <input type="text" placeholder="输入姓名" class="form-control" id="search" name="searchWord">
+            <span class="input-group-btn">
+                <input type="submit" value="搜索" class="btn btn-default">
+            </span>
+        </div>
+    </form>
+    </div>
+<div class="panel panel-default" style="position:relative;top: 80px;width: 90%;margin-left: 5%">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            全部用户
+        </h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover" >
+            <thead>
+            <tr>
+                <th>读者号</th>
+                <th>姓名</th>
+                <th>用户名</th>
+                <th>性别</th>
+                <th>生日</th>
+                <th>地址</th>
+                <th>电话</th>
+                <th>角色</th>
+                <th>编辑</th>
+                <th>删除</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${readers}" var="reader">
+                <tr>
+                    <td><c:out value="${reader.readerId}"></c:out></td>
+                    <td><c:out value="${reader.name}"></c:out></td>
+                    <td><c:out value="${reader.sex}"></c:out></td>
+                    <td><c:out value="${reader.birth}"></c:out></td>
+                    <td><c:out value="${reader.address}"></c:out></td>
+                    <td><c:out value="${reader.phone}"></c:out></td>
+                    <td><c:out value="${reader.address}"></c:out></td>
+                    <td><c:out value="${reader.phone}"></c:out></td>
+                    <td><a href="#"><button type="button" class="btn btn-info btn-xs">编辑</button></a></td>
+                    <td><a href="#"><button type="button" class="btn btn-danger btn-xs">删除</button></a></td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

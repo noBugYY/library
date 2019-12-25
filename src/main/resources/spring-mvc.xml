@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--组件扫描器-->
+    <context:component-scan base-package="com.abc.handler"/>
+
+    <!-- 文件上传multipartResolvers的配置，需要导入commons-fileupload（即文件上传所需的）包 -->
+    <!-- 注意解析器的 id 必须等于 multipartResolver,否则上传会出现异常-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+        <property name="maxUploadSize" value="1024000"></property>
+
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,42 @@
+[
+	{
+		"title": "图书管理",
+		"icon": "fa-cubes",
+		"spread": true,
+		"children": [
+			{
+				"title": "添加图书",
+				"icon": "&#xe641;",
+				"href": "button.html"
+			}, {
+				"title": "图书管理",
+				"icon": "&#xe63c;",
+				"href": "form.html"
+			}
+		]
+	}, {
+		"title": "读者管理",
+		"icon": "fa-cogs",
+		"spread": false,
+		"children": [
+			{
+				"title": "添加读者",
+				"icon": "fa-table",
+				"href": "begtable.html"
+			}, {
+				"title": "读者管理",
+				"icon": "fa-navicon",
+				"href": "navbar.html"
+			}
+		]
+	}, {
+		"title": "借还管理",
+		"icon": "&#x1002;",
+		"spread": false
+	}, {
+		"title": "修改密码",
+		"icon": "fa-address-book",
+		"href": "",
+		"spread": false
+	}
+]

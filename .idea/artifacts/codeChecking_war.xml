@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="codeChecking:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>codeChecking</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="codeChecking.war">
+      <element id="artifact" artifact-name="codeChecking:war exploded" />
+    </root>
+  </artifact>
+</component>
